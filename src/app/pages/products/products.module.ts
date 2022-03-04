@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ProductPageRoutingModule } from './product-routing.module';
+import { ProductPageRoutingModule } from './products-routing.module';
 import { ProductsListPage } from './products-list/products-list.page';
 import { ProductsFormPage } from './products-form/products-form.page';
 
@@ -21,4 +21,4 @@ import { ProductsFormPage } from './products-form/products-form.page';
     ProductsFormPage
   ]
 })
-export class ProductPageModule {}
+export class ProductsPageModule {}
