@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
@@ -14,11 +14,15 @@ import { ProductsFormPage } from './products-form/products-form.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    ProductPageRoutingModule
+    ProductPageRoutingModule,
+    ReactiveFormsModule
   ],
   declarations: [
     ProductsListPage,
     ProductsFormPage
+  ],
+  providers: [
+    FormsModule
   ]
 })
 export class ProductsPageModule {}
