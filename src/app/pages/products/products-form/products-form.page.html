@@ -29,9 +29,9 @@
   </div>
   <ion-button expand="block" color="success" (click)="updateProduct()">
     <ion-icon name="save" slot="start"></ion-icon>
-    Update
+    Save
   </ion-button>
-  <ion-button expand="block" color="danger" (click)="deleteProduct()">
+  <ion-button expand="block" color="danger" (click)="deleteProduct()" *ngIf="id">
     <ion-icon name="trash" slot="start"></ion-icon>
     Delete
   </ion-button>

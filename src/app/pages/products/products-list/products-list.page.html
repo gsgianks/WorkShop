@@ -13,7 +13,16 @@
 	<ion-list>
 		<ion-item *ngFor="let product of products" (click)="openProduct(product)">
 			<ion-label>
+				{{ product.Code }}
+			</ion-label>
+			<ion-label>
 				{{ product.Name }}
+			</ion-label>
+			<ion-label>
+				{{ product.UnitPrice }}
+			</ion-label>
+			<ion-label>
+				{{ product.CodeUnit }}
 			</ion-label>
 		</ion-item>
 	</ion-list>

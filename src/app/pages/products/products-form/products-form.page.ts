@@ -12,23 +12,34 @@ import { DataService } from 'src/app/services/data.service';
 export class ProductsFormPage implements OnInit {
 
   @Input() id: string;
-  product: Product = null;
+  product: Product = new Product();
 
   constructor(private dataService: DataService, private modalCtrl: ModalController,
     private toastCtrl: ToastController) { }
 
   ngOnInit() {
-    this.dataService.getProductById(this.id).subscribe(res=>{
-      this.product = res;
-    });
+    if(this.id != null){
+      this.dataService.getProductById(this.id).subscribe(res=>{
+        this.product = res;
+      });
+    }
   }
 
   public async updateProduct(){
-    this.dataService.updateProduct(this.product);
+    var msj = '';
+    if(this.id == null){
+      this.dataService.addProduct(this.product);
+      msj = 'Product Saved';
+      this.modalCtrl.dismiss();
+    }else{
+      this.dataService.updateProduct(this.product);
+      msj = 'Product Updated';
+    }
     const toast = await this.toastCtrl.create({
-      message: 'Product Updated',
+      message: msj,
       duration: 1000
     });
+    
     toast.present();
   }
 

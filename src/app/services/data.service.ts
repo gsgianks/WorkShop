@@ -22,7 +22,13 @@ export class DataService{
 
     addProduct(product: Product){
         const productRef = collection(this.firestore, 'products');
-        return addDoc(productRef, product);
+        return addDoc(productRef, { 
+            Code: product.Code, 
+            Name: product.Name,
+            UnitPrice: product.UnitPrice,
+            CodeCategory: product.CodeCategory,
+            CodeUnit: product.CodeUnit
+        });
     }
 
     deleteProduct(model: Product){
