@@ -17,7 +17,7 @@ export class ProductsListPage implements OnInit {
 
   constructor(private router: Router, private dataService: DataService, 
     private alertCtrl: AlertController, private modalCtrl: ModalController) { 
-    this.dataService.getProducts().subscribe(res => {
+    this.dataService.getAll<Product>('products').subscribe(res => {
       this.products = res;
     });
   }

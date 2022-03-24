@@ -2,15 +2,19 @@
 	<ion-menu side="start" menuId="first" contentId="main">
 		<ion-header>
 			<ion-toolbar color="primary">
-				<ion-title>Start Menu</ion-title>
+				<ion-menu-toggle>
+					<ion-title [routerLink]="['']">Inicio</ion-title>
+				</ion-menu-toggle>
 			</ion-toolbar>
 		</ion-header>
 
 		<ion-content>
-			<ion-list>
+			<ion-menu-toggle>
 				<ion-item button [routerLink]="['products']">Products</ion-item>
-				<ion-item>Contacto</ion-item>
-			</ion-list>
+			</ion-menu-toggle>
+			<ion-menu-toggle>
+				<ion-item >Contacto</ion-item>
+			</ion-menu-toggle>
 		</ion-content>
 	</ion-menu>
 

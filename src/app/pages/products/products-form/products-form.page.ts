@@ -19,7 +19,7 @@ export class ProductsFormPage implements OnInit {
 
   ngOnInit() {
     if(this.id != null){
-      this.dataService.getProductById(this.id).subscribe(res=>{
+      this.dataService.getById<Product>('products', this.id).subscribe(res=>{
         this.product = res;
       });
     }
@@ -44,7 +44,7 @@ export class ProductsFormPage implements OnInit {
   }
 
   public async deleteProduct(){
-    await this.dataService.deleteProduct(this.product);
+    await this.dataService.delete('products', this.product.Id);
     this.modalCtrl.dismiss();
   }
 

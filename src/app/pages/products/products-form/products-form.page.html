@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="secondary">
+  <ion-toolbar color="medium">
     <ion-title>Products Form</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -8,7 +8,7 @@
   <div *ngIf="product">
     <ion-item>
       <ion-label position="stacked">Code</ion-label>
-      <ion-input [(ngModel)]="product.Code"></ion-input>
+      <ion-input [(ngModel)]="product.Code" type="number"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="stacked">Name</ion-label>
@@ -16,22 +16,22 @@
     </ion-item>
     <ion-item>
       <ion-label position="stacked">Price</ion-label>
-      <ion-input [(ngModel)]="product.UnitPrice"></ion-input>
+      <ion-input [(ngModel)]="product.UnitPrice" type="number"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="stacked">Category</ion-label>
-      <ion-input [(ngModel)]="product.CodeCategory"></ion-input>
+      <ion-input [(ngModel)]="product.CodeCategory" type="number"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="stacked">Unit</ion-label>
-      <ion-input [(ngModel)]="product.CodeUnit"></ion-input>
+      <ion-input [(ngModel)]="product.CodeUnit" type="number"></ion-input>
     </ion-item>
   </div>
-  <ion-button expand="block" color="success" (click)="updateProduct()">
+  <ion-button shape="round" fill="outline" color="primary" (click)="updateProduct()">
     <ion-icon name="save" slot="start"></ion-icon>
     Save
   </ion-button>
-  <ion-button expand="block" color="danger" (click)="deleteProduct()" *ngIf="id">
+  <ion-button shape="round" fill="outline" color="danger" (click)="deleteProduct()" *ngIf="id">
     <ion-icon name="trash" slot="start"></ion-icon>
     Delete
   </ion-button>

@@ -10,15 +10,26 @@ export class DataService{
 
     constructor(private firestore: Firestore){}
 
-    getProducts(): Observable<Product[]>{
-        const notesRef = collection(this.firestore, 'products');
-        return collectionData(notesRef, { idField: 'Id'}) as Observable<Product[]>;
+
+    public getAll<T>(nameCollection: String): Observable<T[]>{
+        const notesRef = collection(this.firestore, `${nameCollection}`);
+        return collectionData(notesRef, { idField: 'Id'}) as Observable<T[]>;
     }
 
-    getProductById(id): Observable<Product>{
-        const productRef = doc(this.firestore, `products/${id}`);
-        return docData(productRef, {idField: 'Id' }) as  Observable<Product>;
+    // getProducts(): Observable<Product[]>{
+    //     const notesRef = collection(this.firestore, 'products');
+    //     return collectionData(notesRef, { idField: 'Id'}) as Observable<Product[]>;
+    // }
+
+    public getById<T>(nameCollection: String, id: String): Observable<T>{
+        const productRef = doc(this.firestore, `${nameCollection}/${id}`);
+        return docData(productRef, {idField: 'Id' }) as  Observable<T>;
     }
+
+    // getProductById(id): Observable<Product>{
+    //     const productRef = doc(this.firestore, `products/${id}`);
+    //     return docData(productRef, {idField: 'Id' }) as  Observable<Product>;
+    // }
 
     addProduct(product: Product){
         const productRef = collection(this.firestore, 'products');
@@ -31,10 +42,15 @@ export class DataService{
         });
     }
 
-    deleteProduct(model: Product){
-        const productRef = doc(this.firestore, `products/${model.Id}`);
+    delete(nameCollection: String, id: String){
+        const productRef = doc(this.firestore, `${nameCollection}/${id}`);
         return deleteDoc(productRef);
     }
+
+    // deleteProduct(model: Product){
+    //     const productRef = doc(this.firestore, `products/${model.Id}`);
+    //     return deleteDoc(productRef);
+    // }
 
     updateProduct(model: Product){
         const productRef = doc(this.firestore, `products/${model.Id}`);
