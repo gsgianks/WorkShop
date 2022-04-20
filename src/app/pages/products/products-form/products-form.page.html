@@ -5,35 +5,35 @@
 </ion-header>
 
 <ion-content>
-  <div *ngIf="product">
-    <ion-item>
-      <ion-label position="stacked">Code</ion-label>
-      <ion-input [(ngModel)]="product.Code" type="number"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="stacked">Name</ion-label>
-      <ion-textarea [(ngModel)]="product.Name" rows="2"></ion-textarea>
-    </ion-item>
-    <ion-item>
-      <ion-label position="stacked">Price</ion-label>
-      <ion-input [(ngModel)]="product.UnitPrice" type="number"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="stacked">Category</ion-label>
-      <ion-input [(ngModel)]="product.CodeCategory" type="number"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="stacked">Unit</ion-label>
-      <ion-input [(ngModel)]="product.CodeUnit" type="number"></ion-input>
-    </ion-item>
-  </div>
-  <ion-button shape="round" fill="outline" color="primary" (click)="updateProduct()">
-    <ion-icon name="save" slot="start"></ion-icon>
-    Save
-  </ion-button>
-  <ion-button shape="round" fill="outline" color="danger" (click)="deleteProduct()" *ngIf="id">
-    <ion-icon name="trash" slot="start"></ion-icon>
-    Delete
-  </ion-button>
-  
-</ion-content>
+    <div *ngIf="product">
+      <ion-item>
+        <ion-label position="floating">Code</ion-label>
+        <ion-input [(ngModel)]="product.Code" type="number"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Name</ion-label>
+        <ion-textarea [(ngModel)]="product.Name" rows="2"></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Price</ion-label>
+        <ion-input [(ngModel)]="product.UnitPrice" type="number"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Category</ion-label>
+        <ion-input [(ngModel)]="product.CodeCategory" type="number"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Unit</ion-label>
+        <ion-input [(ngModel)]="product.CodeUnit" type="number"></ion-input>
+      </ion-item>
+    </div>
+    <ion-button shape="round" fill="outline" color="primary" (click)="updateProduct()">
+      <ion-icon name="save" slot="start"></ion-icon>
+      Save
+    </ion-button>
+    <ion-button shape="round" fill="outline" color="danger" (click)="deleteProduct()" *ngIf="id">
+      <ion-icon name="trash" slot="start"></ion-icon>
+      Delete
+    </ion-button>
+    
+  </ion-content>

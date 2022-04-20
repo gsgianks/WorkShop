@@ -1,0 +1,99 @@
+<ion-header [translucent]="true">
+	<ion-toolbar>
+		<ion-title>Requisitos</ion-title>
+		<ion-buttons slot="start">
+			<ion-menu-button></ion-menu-button>
+      <ion-back-button></ion-back-button>
+		</ion-buttons>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+	<div >
+		<ion-item>
+			<ion-label position="floating">Tipo Identificación</ion-label>
+			<ion-input  type="number"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label position="floating">Identificación</ion-label>
+			<ion-input  type="number"></ion-input>
+		</ion-item>
+		<ion-item>
+		  <ion-label position="floating">Nombre</ion-label>
+		  <ion-input  type="number"></ion-input>
+		</ion-item>
+		<ion-item>
+		  <ion-label position="floating">Apellidos</ion-label>
+		  <ion-textarea  rows="2"></ion-textarea>
+		</ion-item>
+		<ion-item>
+		  <ion-label position="floating">Correo</ion-label>
+		  <ion-input  type="number"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label position="floating">Dirección</ion-label>
+			<ion-textarea  rows="2"></ion-textarea>
+		  </ion-item>
+		<ion-item>
+		  <ion-label position="floating">Teléfono Celular</ion-label>
+		  <ion-input  type="number"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label position="floating">Teléfono Secundario</ion-label>
+			<ion-input  type="number"></ion-input>
+		  </ion-item>
+		<ion-item>
+		  <ion-label position="stacked">Cédula</ion-label>
+		  <ion-input  type="file"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label position="stacked">Déposito</ion-label>
+			<ion-input  type="file"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label position="stacked">Disponibilidad de agua</ion-label>
+			<ion-input  type="file"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label position="stacked">Disponibilidad de luz</ion-label>
+			<ion-input  type="file"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label position="stacked">Certificación de impuestos</ion-label>
+			<ion-input  type="file"></ion-input>
+		</ion-item>
+	  </div>
+	  <ion-button shape="round" fill="outline" color="primary">
+		<ion-icon name="save" slot="start"></ion-icon>
+		Enviar
+	  </ion-button>
+	  
+	<!-- <ion-button expand="full">
+		<ion-icon lazy="true" slot="start" name="image"></ion-icon>
+		<ion-label slot="end">Upload Image</ion-label>
+		<input type="file" (change)="loadImageFromDevice($event)" id="file-input"
+		  accept="image/png, image/jpeg">
+	  </ion-button>
+
+	<br>
+
+	  <ion-item>
+		<ion-label position="stacked">Stacked Label</ion-label>
+		<ion-input type="file"></ion-input>
+	  </ion-item>
+
+	  <ion-item>
+		<ion-label position="stacked">Constancia Salarial</ion-label>
+		<ion-input type="file"></ion-input>
+	  </ion-item>
+
+	  <ion-item>
+		<ion-label position="floating">Category</ion-label>
+		<ion-input [(ngModel)]="product.CodeCategory" type="number"></ion-input>
+	  </ion-item> -->
+	<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+		<ion-fab-button (click)="showRequirements()">
+			<ion-icon name="chevron-up-outline"></ion-icon>
+		</ion-fab-button>
+	</ion-fab>
+</ion-content>

@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
 	<ion-toolbar>
-		<ion-title>Work Shop</ion-title>
+		<ion-title>Contructora Pura Vida</ion-title>
 		<ion-buttons slot="start">
 			<ion-menu-button></ion-menu-button>
 		</ion-buttons>
@@ -8,9 +8,62 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-
-	<div id="container">
-		<strong>In construction</strong>
-		<p>Application to manage your Work Shop</p>
-	</div>
+	<!-- <div id="container"> -->
+		<ion-slides pager="true" class="slide-full" autoplay="true" >
+			<ion-slide *ngFor="let slide of slides" >
+				<ion-card >
+					<img  [src]="slide.img">
+					<ion-card-header>
+					<ion-card-title>
+					{{slide.title}}
+					</ion-card-title>
+					</ion-card-header>
+					<ion-card-content>
+					{{slide.desc}}
+					</ion-card-content>
+				</ion-card>
+			</ion-slide>     
+		</ion-slides>
+		<ion-card (click)="goToRequirements()">
+			<ion-card-header>
+			  <!-- <ion-card-subtitle>Requisitos</ion-card-subtitle> -->
+			  <ion-card-title>Requisitos</ion-card-title>
+			</ion-card-header>
+		  
+			<ion-card-content>
+				<ion-list>
+					<ion-item>
+					  <ion-label>Disponibilidad de agua y luz del lote.</ion-label>
+					</ion-item>
+					<ion-item>
+					  <ion-label>Certificación de impuestos.</ion-label>
+					</ion-item>
+					<ion-item>
+					  <ion-label>Hoja de cotizante o no cotizante de la CCSS</ion-label>
+					</ion-item>
+					<ion-item>
+					  <ion-label>Copia de la cedula de los mayores de edad.</ion-label>
+					</ion-item>
+					<ion-item>
+					  <ion-label>Constancia de ingreso salarial.</ion-label>
+					</ion-item>
+				  </ion-list>			
+			</ion-card-content>
+		</ion-card>	
+		<ion-slides pager="true" class="slide-full" autoplay="true" >
+			<ion-slide *ngFor="let slide of models" >
+				<ion-card >
+					<img  [src]="slide.img">
+					<ion-card-header>
+					<ion-card-title>
+					{{slide.title}}
+					</ion-card-title>
+					</ion-card-header>
+					<ion-card-content>
+					{{slide.desc}}
+					</ion-card-content>
+				</ion-card>
+			</ion-slide>     
+		</ion-slides>
+	<!-- </div> -->
 </ion-content>
