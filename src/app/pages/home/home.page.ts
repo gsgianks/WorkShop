@@ -52,4 +52,8 @@ export class HomePage {
     this.router.navigate(['/requirements', 'form']);
   }
 
+  goToProjectDetails(): void{
+    this.router.navigate(['/details-project', 'details']);
+  }
+
 }

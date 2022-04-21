@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-import { DescriptionPage } from './description/description.page';
+import { DescriptionPage } from '../description/description.page';
 
 @Component({
   selector: 'app-form',

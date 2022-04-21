@@ -9,7 +9,7 @@
 
 <ion-content [fullscreen]="true">
 	<!-- <div id="container"> -->
-		<ion-slides pager="true" class="slide-full" autoplay="true" >
+		<ion-slides pager="true" class="slide-full" autoplay="true" (click)="goToProjectDetails()">
 			<ion-slide *ngFor="let slide of slides" >
 				<ion-card >
 					<img  [src]="slide.img">

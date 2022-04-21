@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+	<ion-toolbar>
+		<ion-title>Detalle proyecto</ion-title>
+		<ion-buttons slot="start">
+			<ion-menu-button></ion-menu-button>
+      <ion-back-button></ion-back-button>
+		</ion-buttons>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides pager="true" class="slide-full" autoplay="true" (click)="goToProjectDetails()">
+			<ion-slide *ngFor="let img of images" >
+				<ion-card >
+					<img  [src]="img.img">
+					<ion-card-header>
+					<ion-card-title>
+					{{img.title}}
+					</ion-card-title>
+					</ion-card-header>
+					<ion-card-content>
+					{{img.desc}}
+					</ion-card-content>
+				</ion-card>
+			</ion-slide>     
+		</ion-slides>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>Modelo economico</ion-card-subtitle>
+        <ion-card-title>Casa con Cochera</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+       <ul>
+          <li>Ubicación: Guápiles, Pococí, Limón</li> 
+          <li>Duración: 3meses</li>
+          <li>Modelo de casa: Casa 2 cuaros y cochera</li>
+          <li>Añadidos: cochera, terraza</li>
+          <li>Casa construida con compra de lote</li>
+       </ul>
+      </ion-card-content>
+    </ion-card>
+
+</ion-content>

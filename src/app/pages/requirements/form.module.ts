@@ -6,7 +6,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { FormPageRoutingModule } from './form-routing.module';
 
-import { FormPage } from './form.page';
+import { FormPage } from './form/form.page';
 import { DescriptionPage } from './description/description.page';
 
 @NgModule({
