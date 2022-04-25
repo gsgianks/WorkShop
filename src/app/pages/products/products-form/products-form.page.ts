@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ModalController, ToastController } from '@ionic/angular';
-import { Product } from 'src/app/models/Product';
+import { Product } from 'src/app/models/product';
 import { DataService } from 'src/app/services/data.service';
 
 @Component({

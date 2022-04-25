@@ -1,16 +1,22 @@
+import { Model } from "src/core/decorators/model.class"
+
 export interface IProduct {
-    Code: string
-    Name: string
-    UnitPrice: number
-    CodeCategory: string
-    CodeUnit: string
+	code: string
+	name: string
+	unitPrice: number
+	codeCategory: string
+	codeUnit: string
 }
 
-export class Product implements IProduct{
-    Id: string
-    Code: string
-    Name: string
-    UnitPrice: number
-    CodeCategory: string
-    CodeUnit: string
+@Model({
+	parent: Product,
+
+})
+export class Product implements IProduct {
+	id: string
+	code: string
+	name: string
+	unitPrice: number
+	codeCategory: string
+	codeUnit: string
 }

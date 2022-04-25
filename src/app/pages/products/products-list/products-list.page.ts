@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlertController, ModalController } from '@ionic/angular';
-import { Product } from 'src/app/models/Product';
+import { Product } from 'src/app/models/product';
 import { DataService } from 'src/app/services/data.service';
 import { ProductsFormPage } from '../products-form/products-form.page';
 
