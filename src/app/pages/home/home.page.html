@@ -7,20 +7,18 @@
 	</ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<!-- <ion-content [fullscreen]="true"> -->
+	<ion-content>
 	<!-- <div id="container"> -->
-		<ion-slides pager="true" class="slide-full" autoplay="true" (click)="goToProjectDetails()">
+		<ion-slides pager="true" [options]="slideOptsOne" class="slide-full" autoplay="true" (click)="goToProjectDetails()">
 			<ion-slide *ngFor="let slide of slides" >
 				<ion-card >
-					<img  [src]="slide.img">
+					<ion-img [src]="slide.img"></ion-img>
 					<ion-card-header>
-					<ion-card-title>
-					{{slide.title}}
-					</ion-card-title>
-					</ion-card-header>
-					<ion-card-content>
-					{{slide.desc}}
-					</ion-card-content>
+						<ion-card-title> {{slide.title}} </ion-card-title>
+						<ion-label>{{slide.desc}}</ion-label>
+					</ion-card-header> 
+
 				</ion-card>
 			</ion-slide>     
 		</ion-slides>
@@ -33,19 +31,24 @@
 			<ion-card-content>
 				<ion-list>
 					<ion-item>
-					  <ion-label>Disponibilidad de agua y luz del lote.</ion-label>
+						<ion-icon name="water-outline"></ion-icon>
+					  	<ion-label>Disponibilidad de agua y luz del lote.</ion-label>
 					</ion-item>
 					<ion-item>
-					  <ion-label>Certificación de impuestos.</ion-label>
+						<ion-icon name="document-text-outline"></ion-icon>
+					  	<ion-label>Certificación de impuestos.</ion-label>
 					</ion-item>
 					<ion-item>
-					  <ion-label>Hoja de cotizante o no cotizante de la CCSS</ion-label>
+						<ion-icon name="document-text-outline"></ion-icon>
+					  	<ion-label>Hoja de cotizante o no cotizante de la CCSS</ion-label>
 					</ion-item>
 					<ion-item>
-					  <ion-label>Copia de la cedula de los mayores de edad.</ion-label>
+						<ion-icon name="copy-outline"></ion-icon>
+					  	<ion-label>Copia de la cedula de los mayores de edad.</ion-label>
 					</ion-item>
 					<ion-item>
-					  <ion-label>Constancia de ingreso salarial.</ion-label>
+						<ion-icon name="cash-outline"></ion-icon>
+					  	<ion-label>Constancia de ingreso salarial.</ion-label>
 					</ion-item>
 				  </ion-list>			
 			</ion-card-content>
@@ -53,17 +56,36 @@
 		<ion-slides pager="true" class="slide-full" autoplay="true" >
 			<ion-slide *ngFor="let slide of models" >
 				<ion-card >
-					<img  [src]="slide.img">
+					<ion-img [src]="slide.img"></ion-img>
 					<ion-card-header>
-					<ion-card-title>
-					{{slide.title}}
-					</ion-card-title>
-					</ion-card-header>
-					<ion-card-content>
-					{{slide.desc}}
-					</ion-card-content>
+						<ion-card-title> {{slide.title}} </ion-card-title>
+						<ion-label>{{slide.desc}}</ion-label>
+					</ion-card-header> 
 				</ion-card>
 			</ion-slide>     
 		</ion-slides>
+		<ion-card (click)="goToRequirements()">
+			<ion-card-header>
+			  <!-- <ion-card-subtitle>Requisitos</ion-card-subtitle> -->
+			  <ion-card-title>Quienes somos</ion-card-title>
+			</ion-card-header>
+		  
+			<ion-card-content>
+				<ion-list>
+					<ion-item>
+					  <ion-label>Misión: Ayudar al pueblo costarricense a construir su casa propia</ion-label>
+					</ion-item>
+					<ion-item>
+					  <ion-label>Visión: Lograr que los costarricenses tengan casa propia.</ion-label>
+					</ion-item>
+					<ion-item>
+					  <ion-label>Empresa Guapileña.</ion-label>
+					</ion-item>
+					<ion-item>
+					  <ion-label>Tel. 2710-0000</ion-label>
+					</ion-item>
+				  </ion-list>			
+			</ion-card-content>
+		</ion-card>	
 	<!-- </div> -->
 </ion-content>

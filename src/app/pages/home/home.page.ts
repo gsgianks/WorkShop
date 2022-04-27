@@ -7,22 +7,30 @@ import { Router } from '@angular/router';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+
+  slideOptsOne = {
+    initialSlide: 0,
+    slidesPerView: 1,
+    autoplay:true,
+    speed: 1000
+   };
+
   slides: { img: string, title: string, desc:string}[] = 
   [
     {
       img:'assets/images/casabono.jpeg',
-      title: 'Proyectos Realizados',
-      desc: 'Descripcion de la casa'
+      title: 'Proyecto 1',
+      desc: 'Breve descripcion del proyecto 1'
     },
     {
       img:'assets/images/bono2.jpg',
-      title: 'Proyectos Realizados',
-      desc: 'Descripcion de la casa'
+      title: 'Proyecto 2',
+      desc: 'Breve descripcion del proyecto 2'
     },
     {
       img:'assets/images/bono3.jpg',
-      title: 'Proyectos Realizados',
-      desc: 'Descripcion de la casa'
+      title: 'Proyecto 3',
+      desc: 'Breve descripcion del proyecto 3'
     },
   ]
 
