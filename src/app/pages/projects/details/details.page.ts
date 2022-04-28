@@ -7,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailsPage implements OnInit {
 
+  slideOptsOne = {
+    initialSlide: 0,
+    slidesPerView: 1,
+    autoplay:true,
+    speed: 1000
+   };
+
   images: { img: string, title: string, desc:string}[] = 
   [
     {

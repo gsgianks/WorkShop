@@ -9,7 +9,7 @@
 </ion-header>
 
 <ion-content>
-  	<ion-slides pager="true" class="slide-full" autoplay="true">
+  	<ion-slides pager="true" class="slide-full" [options]="slideOptsOne">
 		<ion-slide *ngFor="let img of images" >
 			<ion-card >
 				<ion-img [src]="img.img"></ion-img>

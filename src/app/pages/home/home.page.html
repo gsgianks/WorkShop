@@ -9,6 +9,7 @@
 
 <!-- <ion-content [fullscreen]="true"> -->
 	<ion-content>
+		
 	<!-- <div id="container"> -->
 		<ion-slides pager="true" [options]="slideOptsOne" class="slide-full" autoplay="true" (click)="goToProjectDetails()">
 			<ion-slide *ngFor="let slide of slides" >
@@ -25,7 +26,7 @@
 		<ion-card (click)="goToRequirements()">
 			<ion-card-header>
 			  <!-- <ion-card-subtitle>Requisitos</ion-card-subtitle> -->
-			  <ion-card-title>Requisitos</ion-card-title>
+			  <ion-card-title class="cls-tittle">Requisitos</ion-card-title>
 			</ion-card-header>
 		  
 			<ion-card-content>
@@ -53,7 +54,7 @@
 				  </ion-list>			
 			</ion-card-content>
 		</ion-card>	
-		<ion-slides pager="true" class="slide-full" autoplay="true" >
+		<ion-slides pager="true" class="slide-full" [options]="slideOptsOne" >
 			<ion-slide *ngFor="let slide of models" >
 				<ion-card >
 					<ion-img [src]="slide.img"></ion-img>
@@ -67,22 +68,33 @@
 		<ion-card (click)="goToRequirements()">
 			<ion-card-header>
 			  <!-- <ion-card-subtitle>Requisitos</ion-card-subtitle> -->
-			  <ion-card-title>Quienes somos</ion-card-title>
+			  <ion-card-title class="cls-tittle">Quienes somos</ion-card-title>
 			</ion-card-header>
 		  
 			<ion-card-content>
 				<ion-list>
 					<ion-item>
-					  <ion-label>Misión: Ayudar al pueblo costarricense a construir su casa propia</ion-label>
+					  <ion-label><b>Misión:</b> Ayudar al pueblo costarricense a construir su casa propia</ion-label>
 					</ion-item>
 					<ion-item>
-					  <ion-label>Visión: Lograr que los costarricenses tengan casa propia.</ion-label>
+					  <ion-label><b>Visión:</b> Lograr que los costarricenses tengan casa propia.</ion-label>
 					</ion-item>
 					<ion-item>
-					  <ion-label>Empresa Guapileña.</ion-label>
+					  <ion-label><b>Ubicación:</b>Limón, Pococí, Guápiles ...</ion-label>
 					</ion-item>
 					<ion-item>
-					  <ion-label>Tel. 2710-0000</ion-label>
+					  <ion-label><b>Tel.</b> 2710-0000</ion-label>
+					</ion-item>
+					<ion-item id="social-container">
+						<div class="social-icons">
+							<ion-icon class="i-facebook" name="logo-facebook"></ion-icon>
+						</div> 
+						<div class="social-icons">
+							<ion-icon class="i-instagram" name="logo-instagram"></ion-icon>
+						</div>
+						<div class="social-icons">
+							<ion-icon class="i-twitter" name="logo-twitter"></ion-icon>
+						</div>
 					</ion-item>
 				  </ion-list>			
 			</ion-card-content>
